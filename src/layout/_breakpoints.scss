@@ -1,0 +1,117 @@
+/* Breakpoints */
+$breakpoints: (
+    'xxl': 1599.99px, 
+    'xl': 1199.99px,  
+    'lg': 991.99px,   
+    'md': 767.99px,   
+    'sm': 575.99px    
+) !default;
+
+@mixin xxl-down {
+    @media screen and (max-width: map-get($breakpoints, 'xxl')) {
+        @content;
+    }
+}
+
+@mixin xl-down {
+    @media screen and (max-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media screen and (max-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @media screen and (max-width: map-get($breakpoints, 'md')) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+        @content;
+    }
+}
+
+//
+
+@mixin xxl-up {
+    @media screen and (min-width: map-get($breakpoints, 'xxl')) {
+        @content;
+    }
+}
+
+@mixin xl-up {
+    @media screen and (min-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @media screen and (min-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+
+@mixin md-up {
+    @media screen and (min-width: map-get($breakpoints, 'md')) {
+        @content;
+    }
+}
+
+@mixin sm-up {
+    @media screen and (min-width: map-get($breakpoints, 'sm')) {
+        @content;
+    }
+}
+
+//
+
+@mixin between-xxl-xl {
+    @media screen and (min-width: map-get($breakpoints, 'xl')) and (max-width: map-get($breakpoints, 'xxl')) {
+        @content;
+    }
+}
+
+@mixin between-xl-lg {
+    @media screen and (min-width: map-get($breakpoints, 'lg')) and (max-width: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin between-lg-md {
+    @media screen and (min-width: map-get($breakpoints, 'md')) and (max-width: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+
+@mixin between-md-sm {
+    @media screen and (min-width: map-get($breakpoints, 'sm')) and (max-width: map-get($breakpoints, 'md')) {
+        @content;
+    }
+}
+
+@mixin between-sm-xs {
+    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+        @content;
+    }
+}
+
+//TODO:: I will add new features
+
+@mixin between($start, $end: null) {
+    @if $end {
+        @media screen and (min-width: map-get($breakpoints, $start)) and (max-width: map-get($breakpoints, $end)) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: map-get($breakpoints, $start)) {
+            @content;
+        }
+    }
+}
+

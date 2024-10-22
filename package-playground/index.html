@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/layout/grid.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.onurcanalp.com.tr/assets/fonts/fontawesome/css/all.min.css"> <!--Fontawesome Icons-->
+    <title>Oksilyum UI Kit</title>
+
+
+
+    <script type="module">
+        import { initAutoSizer, destroyAutoSizer } from 'https://onurcanalp.com.tr/jslibraries/sizer-js/sizer.js';
+
+        /* 
+            initAutoSizer() function is used to initialize the autoSizer. 
+            destroyAutoSizer() function is used to destroy the autoSizer.
+        */
+
+        window.onload = function() {
+            initAutoSizer();
+        }
+        const switchButton = document.getElementById('switch');
+        switchButton.addEventListener('click', function () {
+            initAutoSizer("test1");
+        });
+
+        function triggerTheSizer(tagname) {
+            initAutoSizer(tagname);
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="section banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src="./assets/images/banner.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container preview">
+        <div class="row">
+            <div class="col">
+                product-1
+            </div>
+            <div class="col">
+                product-1
+            </div>
+            <div class="col">
+                product-1
+            </div>
+            <div class="col">
+                product-1
+            </div>
+        </div>
+    </div>
+
+    <div class="container preview">
+        <div class="row header-wrapper">
+            <div class="col-4">
+                Header Content Logo
+            </div>
+            <div class="col-8">
+                Header Menu
+            </div>
+        </div>
+        <div class="row product-wrapper">
+            <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                Product 1
+            </div>
+            <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                Product 2
+            </div>
+            <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                Product 3
+            </div>
+            <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                Product 4
+            </div>
+        </div>
+    </div>
+
+    <div class="section products-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="products-title">Products (Oksilyum ui kit)</h1>
+                </div>
+            </div>
+            <div class="row filter-wrapper">
+                <div class="col-8 col-md-12">
+                    <ul class="main-filter-options">
+                        <li class="filter-option">
+                            <span class="filter-name">
+                                Headphone type
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </li>
+                        <li class="filter-option">
+                            <span class="filter-name">
+                                Price
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </li>
+                        <li class="filter-option">
+                            <span class="filter-name">
+                                Review
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </li>
+                        <li class="filter-option">
+                            <span class="filter-name">
+                                Color
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </li>
+                        <li class="filter-option">
+                            <span class="filter-name">
+                                Material
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </li>
+                        <li class="filter-option">
+                            <span class="filter-name">
+                                Offer
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-12">
+                    <div class="side-filter-option">
+                        <div class="filter-option">
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-headphones"></i>
+                            </span>
+                            <span class="filter-name">
+                                Headphone type
+                            </span>
+                            <span class="filter-icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row product-list" >
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-1.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-2.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-3.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-4.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-4.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-3.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-2.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-lg-6 col-md-12">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./assets/images/product-1.jpg" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name">
+                                    TDX Sinkers
+                                </h3>
+                                <span class="product-price">
+                                    $ 675.00
+                                </span>
+                            </div>
+                            <p class="product-description">
+                                5 types of shoos available
+                            </p>
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="star-rate-number">
+                                    (121)
+                                </span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="button add-to-cart">
+                                    Add To Cart
+                                </button>
+                                <button class="button add-shortlist">
+                                    Add Shortlist
+                                </button>
+                            </div>
+                        </div>
+                        <div class="add-to-favorite">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

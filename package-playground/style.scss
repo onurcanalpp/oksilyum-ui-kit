@@ -1,0 +1,245 @@
+
+@import '../src/layout/breakpoints';
+
+/*
+
+override breakpoints
+
+$breakpoints: map-merge($breakpoints, (
+  'md': 800px
+));
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// for preview
+.preview {
+    .col,
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        border: 1px solid #d9d9d9;
+        padding: 16px 20px;
+        margin-top: 30px;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+.banner {
+    img {
+        width: 100%;
+        cursor: pointer;
+        transition: all ease .5s;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+.products-wrapper {
+    padding: 30px 0px;
+    .products-title {
+        font-size: 28px;
+        color: #0D3356;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+        @include md-down {
+            font-size: 20px;
+        }
+    }
+    .filter-wrapper {
+        margin-bottom: 30px;
+        color: #1D364D;
+        padding: 0px 20px;
+        .main-filter-options {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 0;
+            @include md-down {
+                margin-bottom: 20px;
+            }
+            .filter-option {
+                background-color: #EBEDEC;
+                padding: 10px 14px;
+                border-radius: 28px;
+                font-size: 14px;
+                cursor: pointer;
+                display: flex;
+                gap: 8px;
+                transition: all ease .5s;
+                @include md-down {
+                    font-size: 12px;
+                }
+                &:hover {
+                    background-color: #c7c7c7;
+                }
+            }
+        }
+        .side-filter-option {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            height: 100%;
+            @include md-down {
+                justify-content: left;
+            }
+            .filter-option {
+                padding: 10px 14px;
+                border-radius: 28px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: all ease .5s;
+                border: 1px solid #E0E0E0;
+                display: flex;
+                gap: 12px;
+                @include md-down {
+                    font-size: 12px;
+                }
+                &:hover {
+                    
+                    background-color: #EBEDEC;
+                }
+            }
+        }
+    }
+    .product-list {
+        .product-item {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #dddddd;
+            position: relative;
+            cursor: pointer;
+            margin: 10px 10px;
+            .product-image {
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transition: all ease .5s;
+                }
+            }
+            
+            &:hover {
+                img {
+                    scale: 1.2;
+                }
+            }
+            .product-content {
+                padding: 24px 16px;
+                .product-header {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    .product-name {
+                        color: #667085;
+                        font-weight: 500;
+                        font-size: 18px;
+                    }
+                    .product-price {
+                        font-weight: 600;
+                    }
+                }
+                .product-description {
+                    color: #98A2B3;
+                    margin-bottom: 10px;
+                }
+                .product-rating {
+                    margin-bottom: 10px;
+                    .stars {
+                        i {
+                            color: rgb(217, 217, 217);
+                        }
+                        .active {
+                            color: #FDB022;
+                        }
+                    }
+                }
+                .product-actions {
+                    display: flex;
+                    gap: 12px;
+                    justify-content: space-around;
+                    .button {
+                        border:1px solid #000000;
+                        border-radius: 50px;
+                        padding: 8px 14px;
+                        font-weight: 600;
+                        flex-grow: 1;
+                        cursor: pointer;
+                        transition: all ease .5s;
+                        &.add-to-cart {
+                            background-color: #3A4980;
+                            color: #ffffff;
+                            border-color: #3A4980;
+                            &:hover {
+                                background-color: #ffffff;
+                                color: #344054;
+                                border-color: #344054;
+                            }
+                        }
+                        &.add-shortlist {
+                            background-color: #ffffff;
+                            color: #344054;
+                            border-color: #344054;
+                            &:hover {
+                                background-color: #3A4980;
+                                color: #ffffff;
+                                border-color: #3A4980;
+                            }
+                        }
+                    } 
+                }
+            }
+            .add-to-favorite {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: #FCFCFD;
+                padding: 10px 10px;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: #667085;
+                transition: all ease .3s;
+                cursor: pointer;
+                i {
+                    transition: all ease .5s;
+                }
+                &:hover {
+                    color: rgb(255, 55, 55);
+                    i {
+                        transform: rotateY(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
