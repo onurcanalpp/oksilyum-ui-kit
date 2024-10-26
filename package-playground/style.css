@@ -69,7 +69,6 @@ body {
 .products-wrapper .filter-wrapper {
   margin-bottom: 30px;
   color: #1D364D;
-  padding: 0px 20px;
 }
 .products-wrapper .filter-wrapper .main-filter-options {
   list-style: none;
@@ -137,7 +136,7 @@ body {
   border: 1px solid #dddddd;
   position: relative;
   cursor: pointer;
-  margin: 10px 10px;
+  margin-bottom: 20px;
 }
 .products-wrapper .product-list .product-item .product-image {
   overflow: hidden;
