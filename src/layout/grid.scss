@@ -2,9 +2,37 @@
 
 @import '_breakpoints.scss';
 
-/* Breakpoints */
-// grid system
 $grid-columns: 12;
+// on the future can be reassigned.
+$grid-padding: 12px !default;
+
+.align-top {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+.justify-left {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-right {
+    justify-content: flex-end;
+}
 
 // base layout classes
 .container {
@@ -26,102 +54,68 @@ $grid-columns: 12;
     @include lg-down {
         max-width: 720px;
     }*/
-    &.align-items-top {
-        align-items: flex-start;
-    }
-
-    &.align-items-center {
-        align-items: center;
-    }
-
-    &.align-items-bottom {
-        align-items: flex-end;
-    }
-
-    &.justify-content-left {
-        justify-content: flex-start;
-    }
-
-    &.justify-content-center {
-        justify-content: center;
-    }
-
-    &.justify-content-space-between {
-        justify-content: space-between;
-    }
-
-    &.justify-content-right {
-        justify-content: flex-end;
-    }
 }
 
 .row {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+    margin-right: -$grid-padding;
+    margin-left: -$grid-padding;
 }
 
 .col {
     box-sizing: border-box;
     flex-grow: 1;
-    flex-basis: math.div(100%, $grid-columns); 
+    flex-basis: math.div(100%, $grid-columns);
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+}
+
+.d-none {
+    display: none;
+}
+
+.f-nowrap {
+    flex-wrap: nowrap;
 }
 
 @for $i from 1 through $grid-columns {
     .col-#{$i} {
         box-sizing: border-box;
         flex-grow: 0;
-        width: math.div($i * 100%, $grid-columns);
+        flex: 0 0 math.div($i * 100%, $grid-columns);
+        padding-left: 12px;
+        padding-right: 12px;
+        max-width: math.div($i * 100%, $grid-columns);
+    }
+    .order-#{$i} {
+        order: $i;
     }
 }
 
-// col classes
-@include xxl-down {
-    @for $i from 1 through $grid-columns {
-        .col-xxl-#{$i} {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $grid-columns);
+@each $size, $min-width in $breakpoints {
+    @media (max-width: #{$min-width}) {
+        @for $i from 1 through $grid-columns {
+            .col-#{$size}-#{$i} {
+                box-sizing: border-box;
+                flex-grow: 0;
+                flex: 0 0 math.div($i * 100%, $grid-columns);
+                max-width: math.div($i * 100%, $grid-columns);
+                padding-left: $grid-padding;
+                padding-right: $grid-padding;
+            }
+            .order-#{$size}-#{$i} {
+                order: $i;
+            }
         }
-    }
-}
 
-@include xl-down {
-    @for $i from 1 through $grid-columns {
-        .col-xl-#{$i} {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $grid-columns);
+        .d-#{$size}-none {
+            display: none;
         }
-    }
-}
 
-@include lg-down {
-    @for $i from 1 through $grid-columns {
-        .col-lg-#{$i} {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $grid-columns);
-        }
-    }
-}
-
-@include md-down {
-    @for $i from 1 through $grid-columns {
-        .col-md-#{$i} {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $grid-columns);
-        }
-    }
-}
-
-@include sm-down {
-    @for $i from 1 through $grid-columns {
-        .col-sm-#{$i} {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $grid-columns);
+        .d-#{$size}-block {
+            display: block;
         }
     }
 }
