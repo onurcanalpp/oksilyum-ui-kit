@@ -1,4 +1,16 @@
 /* Breakpoints */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --bg-primary: blue;
+}
+
+.mt-button {
+  --mt-button-padding: 8px 12px;
+  --mt-button-background: var(--bg-primary);
+  background: var(--mt-button-background);
+  padding: var(--mt-button-padding);
+}
+
 /*
 
 override breakpoints
@@ -7,7 +19,6 @@ $breakpoints: map-merge($breakpoints, (
   'md': 800px
 ));
 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .preview .col,
 .preview .col-1,
 .preview .col-2,
@@ -237,4 +248,13 @@ body {
 }
 .products-wrapper .product-list .product-item .add-to-favorite:hover i {
   transform: rotateY(360deg);
+}
+
+.component-view {
+  width: 100%;
+  height: 400px;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

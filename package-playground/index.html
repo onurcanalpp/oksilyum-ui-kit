@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/theme-default.css">
     <link rel="stylesheet" href="../src/layout/grid.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.onurcanalp.com.tr/assets/fonts/fontawesome/css/all.min.css"> <!--Fontawesome Icons-->
     <title>Oksilyum UI Kit</title>
-
-
 
     <script type="module">
         import { initAutoSizer, destroyAutoSizer } from 'https://onurcanalp.com.tr/jslibraries/sizer-js/sizer.js';
@@ -19,6 +18,7 @@
             destroyAutoSizer() function is used to destroy the autoSizer.
         */
 
+        /*
         window.onload = function() {
             initAutoSizer();
         }
@@ -31,11 +31,16 @@
             initAutoSizer(tagname);
 
         }
+        */
 
     </script>
 </head>
 
 <body>
+    <div class="component-view">
+        
+    </div>
+    <button class="theme-button" onclick="toggleTheme()">Toggle</button>
 
     <div class="section banner">
         <div class="container">
@@ -73,6 +78,7 @@
                 Header Menu
             </div>
         </div>
+        <button class="mt-button mt-button-rounded"></button>
         <div class="row product-wrapper">
             <div class="col-3 col-xl-4 col-lg-6 col-md-12">
                 Product 1
@@ -516,5 +522,7 @@
     </div>
 
 </body>
+
+<script type="text/javascript" src="./app.js"></script>
 
 </html>
